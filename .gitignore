@@ -1,0 +1,17 @@
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Databricks bundle local state
+.bundle/
+.databricks/
+
+# OS files
+.DS_Store
