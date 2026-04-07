@@ -28,7 +28,7 @@ winget install Databricks.DatabricksCLI
 databricks version
 ```
 
-### macOS/Linux
+### macOS/Linux  command
 ```bash
 curl -fsSL https://raw.githubusercontent.com/databricks/setup-cli/main/install.sh | sh
 databricks version
