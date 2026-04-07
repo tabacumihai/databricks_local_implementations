@@ -23,7 +23,7 @@ targets:
     default: true
     mode: development
     workspace:
-      root_path: /Shared/.bundle/${bundle.name}
+      root_path: ~/Shared/.bundle/${bundle.name}
     variables:
       catalog: main
       schema: dab_demo
@@ -32,7 +32,7 @@ targets:
   prod:
     mode: production
     workspace:
-      root_path: /Shared/.bundle/${bundle.name}
+      root_path: ~/Shared/.bundle/${bundle.name}
     variables:
       catalog: main
       schema: dab_demo_prod
