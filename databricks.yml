@@ -18,16 +18,15 @@ variables:
     description: Optional SQL warehouse id for the dashboard resource
     default: ""
 
-permissions:
-  - level: CAN_MANAGE
-    user_name: tabacu.mihai@yahoo.com
-
 targets:
   dev:
     default: true
     mode: development
     workspace:
       root_path: ~/.bundle/${bundle.name}/${bundle.target}
+    permissions:
+      - level: CAN_MANAGE
+        user_name: tabacu.mihai@yahoo.com
     variables:
       catalog: main
       schema: dab_demo
@@ -37,6 +36,9 @@ targets:
     mode: production
     workspace:
       root_path: ~/.bundle/${bundle.name}/${bundle.target}
+    permissions:
+      - level: CAN_MANAGE
+        user_name: tabacu.mihai@yahoo.com
     variables:
       catalog: main
       schema: dab_demo_prod

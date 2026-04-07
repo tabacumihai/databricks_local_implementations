@@ -3,10 +3,8 @@ resources:
     lakeflow_serverless_demo:
       name: lakeflow_serverless_demo
       permissions:
-        - level: CAN_MANAGE 
+        - level: CAN_MANAGE
           user_name: tabacu.mihai@yahoo.com
-        - level: CAN_VIEW
-          group_name: users
 
       description: "2-step Lakeflow Job on serverless compute for Databricks Free Edition"
       tags:
