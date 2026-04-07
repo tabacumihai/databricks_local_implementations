@@ -21,7 +21,7 @@ variables:
 targets:
   dev:
     default: true
-    mode: development
+    mode: production
     workspace:
       root_path: ~/.bundle/${bundle.name}/${bundle.target}
     permissions:
