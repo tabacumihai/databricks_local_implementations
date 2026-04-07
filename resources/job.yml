@@ -5,7 +5,6 @@ resources:
       permissions:
         - level: CAN_MANAGE 
           user_name: tabacu.mihai@yahoo.com
-
         - level: CAN_VIEW
           group_name: users
 
