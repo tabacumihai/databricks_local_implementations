@@ -1,0 +1,13 @@
+# Optional file. Leave it in the repo, but only use it after you export/create a dashboard file.
+# To enable it, set a real warehouse_id and add your dashboard JSON under dashboards/.
+#
+# resources:
+#   dashboards:
+#     customer_events_dashboard:
+#       display_name: "Customer Events Dashboard"
+#       file_path: ../dashboards/customer_events.lvdash.json
+#       warehouse_id: ${var.warehouse_id}
+#       parent_path: /Workspace/Users/${workspace.current_user.userName}/dashboards
+#       permissions:
+#         - level: CAN_VIEW
+#           user_name: ${workspace.current_user.userName}
