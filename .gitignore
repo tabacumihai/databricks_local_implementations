@@ -1,17 +1,8 @@
-# Python virtual environment
 .venv/
-venv/
-
-# Python cache
 __pycache__/
+.pytest_cache/
+dist/
+build/
 *.pyc
-
-# VS Code
-.vscode/
-
-# Databricks bundle local state
 .bundle/
 .databricks/
-
-# OS files
-.DS_Store

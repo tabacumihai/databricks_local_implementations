@@ -1,0 +1,41 @@
+bundle:
+  name: dab-serverless-free-edition
+
+include:
+  - resources/*.yml
+
+variables:
+  catalog:
+    description: Target Unity Catalog catalog
+    default: main
+  schema:
+    description: Target schema name
+    default: dab_demo
+  table_name:
+    description: Target table name
+    default: customer_events
+  warehouse_id:
+    description: Optional SQL warehouse id for the dashboard resource
+    default: ""
+
+targets:
+  dev:
+    default: true
+    mode: development
+    workspace:
+      host: ${env.DATABRICKS_HOST}
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+    variables:
+      catalog: main
+      schema: dab_demo
+      table_name: customer_events
+
+  prod:
+    mode: production
+    workspace:
+      host: ${env.DATABRICKS_HOST}
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+    variables:
+      catalog: main
+      schema: dab_demo_prod
+      table_name: customer_events

@@ -1,0 +1,29 @@
+resources:
+  jobs:
+    lakeflow_serverless_demo:
+      name: lakeflow_serverless_demo
+      description: "2-step Lakeflow Job on serverless compute for Databricks Free Edition"
+      tags:
+        project: dab-serverless-free-edition
+        environment: ${bundle.target}
+      tasks:
+        - task_key: create_table
+          notebook_task:
+            notebook_path: ../notebooks/01_create_table.py
+            base_parameters:
+              catalog: ${var.catalog}
+              schema: ${var.schema}
+              table_name: ${var.table_name}
+
+        - task_key: insert_dummy_data
+          depends_on:
+            - task_key: create_table
+          notebook_task:
+            notebook_path: ../notebooks/02_insert_dummy_data.py
+            base_parameters:
+              catalog: ${var.catalog}
+              schema: ${var.schema}
+              table_name: ${var.table_name}
+
+      queue:
+        enabled: true
