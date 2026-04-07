@@ -48,7 +48,7 @@ Then answer:
 
 ```bash
 python -m venv .venv
-# activate the venv
+# activate the venv locally
 pip install -r requirements-dev.txt
 
 pytest
