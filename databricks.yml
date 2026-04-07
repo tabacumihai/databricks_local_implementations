@@ -18,6 +18,10 @@ variables:
     description: Optional SQL warehouse id for the dashboard resource
     default: ""
 
+permissions:
+  - level: CAN_MANAGE
+    user_name: tabacu.mihai@yahoo.com
+    
 targets:
   dev:
     default: true
